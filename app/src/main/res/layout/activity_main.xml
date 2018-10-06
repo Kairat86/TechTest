@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/old_price_bottom"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/mac"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mac"/>
+
+                    <ImageView
+                        android:id="@+id/circles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mac"
+                        app:srcCompat="@drawable/circles"/>
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/card">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/vendor_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/vendor_code"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/macbook_pro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:padding="8dp"
+                        android:text="@string/notebook_apple_macbook"
+                        android:textColor="#030303"
+                        android:textSize="22sp"
+                        app:layout_constraintTop_toBottomOf="@id/vendor_code"/>
+
+                    <ImageView
+                        android:id="@+id/stars"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/ic_stars"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/macbook_pro"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/review_num"
+                        android:textColor="#2152C3"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/stars"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/stars"/>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#EAEAEA"
+                        app:layout_constraintTop_toBottomOf="@id/stars"/>
+
+                    <TextView
+                        android:id="@+id/old_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/old_price"
+                        android:textColor="#8E8E93"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/museo_sans_cyrl_500"
+                        android:text="@string/price"
+                        android:textColor="#F57D26"
+                        android:textSize="28sp"
+                        app:layout_constraintStart_toStartOf="@id/old_price"
+                        app:layout_constraintTop_toBottomOf="@id/old_price"/>
+
+                    <TextView
+                        android:id="@+id/credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/credit"
+                        android:textColor="#9B9B9B"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@id/old_price"
+                        app:layout_constraintStart_toStartOf="@id/credit_price"
+                        app:layout_constraintTop_toTopOf="@id/old_price"/>
+
+                    <TextView
+                        android:id="@+id/credit_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/credit_price"
+                        android:textColor="#030303"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/credit"/>
+
+                    <LinearLayout
+                        android:id="@+id/combi_shape"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/combined_shape"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/credit_price">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sfui_text_regular"
+                            android:gravity="center|bottom"
+                            android:paddingBottom="8dp"
+                            android:text="@string/month_3"
+                            android:textColor="#9B9B9B"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sfui_text_regular"
+                            android:gravity="center|bottom"
+                            android:paddingBottom="8dp"
+                            android:text="@string/month_6"
+                            android:textColor="#9B9B9B"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sfui_text_regular"
+                            android:gravity="center|bottom"
+                            android:paddingBottom="8dp"
+                            android:text="@string/month_9"
+                            android:textColor="#9B9B9B"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sfui_text_regular"
+                            android:gravity="center|bottom"
+                            android:paddingBottom="8dp"
+                            android:text="@string/month_12"
+                            android:textColor="#030303"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sfui_text_regular"
+                            android:gravity="center|bottom"
+                            android:paddingBottom="8dp"
+                            android:text="@string/month_24"
+                            android:textColor="#9B9B9B"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="#EAEAEA"
+                        app:layout_constraintTop_toBottomOf="@id/combi_shape"/>
+
+                    <TextView
+                        android:id="@+id/specs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:padding="8dp"
+                        android:text="@string/specs"
+                        android:textColor="#030303"
+                        android:textSize="13sp"
+                        app:layout_constraintTop_toBottomOf="@id/view2"/>
+
+                    <TextView
+                        android:id="@+id/instruction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ic_instruction"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:gravity="center"
+                        android:text="@string/instruction"
+                        android:textColor="#2152C3"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/specs"/>
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="16dp"
+                        android:background="#EAEAEA"
+                        app:layout_constraintTop_toBottomOf="@id/instruction"/>
+
+                    <TextView
+                        android:id="@+id/available_configs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/available_configs"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view3"/>
+
+                    <TextView
+                        android:id="@+id/display_inch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/display_inch"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@id/mem_gb"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/available_configs"/>
+
+                    <TextView
+                        android:id="@+id/mem_gb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/mem_gb"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/display_inch"
+                        app:layout_constraintTop_toBottomOf="@id/available_configs"/>
+
+                    <TextView
+                        android:id="@+id/inch_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/ic_inch_back"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:gravity="center"
+                        android:text="@string/inch_13"
+                        android:textColor="#030303"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/display_inch"
+                        app:layout_constraintTop_toBottomOf="@id/display_inch"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/ic_inch_back_grey"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:gravity="center"
+                        android:text="@string/inch_15"
+                        android:textColor="#030303"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@id/inch_13"
+                        app:layout_constraintTop_toBottomOf="@id/display_inch"/>
+
+                    <TextView
+                        android:id="@+id/gb_128"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/ic_inch_back_grey"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:gravity="center"
+                        android:text="@string/gb_128"
+                        android:textColor="#030303"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/mem_gb"
+                        app:layout_constraintTop_toBottomOf="@id/mem_gb"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/ic_inch_back"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:gravity="center"
+                        android:text="@string/gb_512"
+                        android:textColor="#030303"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@id/gb_128"
+                        app:layout_constraintTop_toBottomOf="@id/mem_gb"/>
+
+                    <TextView
+                        android:id="@+id/color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/color"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@id/inch_13"
+                        app:layout_constraintTop_toBottomOf="@id/gb_128"/>
+
+                    <ImageView
+                        android:id="@+id/color_grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_color_grey"
+                        app:layout_constraintStart_toStartOf="@id/color"
+                        app:layout_constraintTop_toBottomOf="@id/color"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:background="@drawable/ic_color_light"
+                        app:layout_constraintStart_toEndOf="@id/color_grey"
+                        app:layout_constraintTop_toBottomOf="@id/color"/>
+
+                    <TextView
+                        android:id="@+id/campaign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:drawableStart="@drawable/ic_gift_large"
+                        android:drawableLeft="@drawable/ic_gift_large"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/campaign"
+                        android:textColor="#030303"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/color_grey"/>
+
+                    <TextView
+                        android:id="@+id/open_offer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:gravity="center"
+                        android:text="@string/open_offer"
+                        android:textColor="#2152C3"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@+id/campaign"/>
+
+                    <TextView
+                        android:id="@+id/found_cheaper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:drawableStart="@drawable/badges_612x612"
+                        android:drawableLeft="@drawable/badges_612x612"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:text="@string/found_cheaper"
+                        android:textColor="#030303"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/open_offer"/>
+
+                    <TextView
+                        android:id="@+id/send"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:gravity="center"
+                        android:text="@string/send"
+                        android:textColor="#2152C3"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@+id/found_cheaper"/>
+
+
+                    <ImageView
+                        android:id="@+id/window"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/send"
+                        app:srcCompat="@drawable/group_29"/>
+
+                    <TextView
+                        android:id="@+id/more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/sfui_text_regular"
+                        android:gravity="center"
+                        android:text="@string/more"
+                        android:textColor="#2152C3"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@+id/window"/>
+
+                    <TextView
+                        android:id="@+id/accessories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/accessories"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/more"/>
+
+                    <ImageView
+                        android:id="@+id/mouse"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/mouse"
+                        app:layout_constraintEnd_toStartOf="@id/headphones"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/accessories"/>
+
+
+                    <ImageView
+                        android:id="@+id/headphones"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/headpnones"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/mouse"
+                        app:layout_constraintTop_toBottomOf="@+id/accessories"/>
+
+                    <ImageView
+                        android:id="@+id/add1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/add"
+                        app:layout_constraintEnd_toEndOf="@id/mouse"
+                        app:layout_constraintTop_toTopOf="@id/mouse"/>
+
+                    <ImageView
+                        android:id="@+id/add2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/add"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/headphones"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@id/mouse"/>
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/three_dots"/>
+
+
+    <TextView
+        android:id="@+id/old_price_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/museo_sans_cyrl_500"
+        android:text="@string/old_price"
+        android:textColor="#777777"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/price"
+        app:layout_constraintStart_toStartOf="@id/price"/>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/museo_sans_cyrl_500"
+        android:text="@string/price"
+        android:textColor="#9B9B9B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/orange"
+        android:fontFamily="@font/museo_sans_cyrl_500"
+        android:text="@string/buy"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_credit"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/price"
+        app:layout_constraintTop_toTopOf="@+id/old_price_bottom"/>
+
+    <Button
+        android:id="@+id/btn_credit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/orange"
+        android:fontFamily="@font/museo_sans_cyrl_500"
+        android:text="@string/credit"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/btn_buy"
+        app:layout_constraintTop_toTopOf="@+id/old_price_bottom"/>
+</android.support.constraint.ConstraintLayout>

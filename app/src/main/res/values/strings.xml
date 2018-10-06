@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">TechTest</string>
+    <string name="action_percent">Present</string>
+    <string name="vendor_code">Артикул: 33013</string>
+    <string name="notebook_apple_macbook">Notebook Apple MacBook Pro 13\" Retina 512 (MF841RS/A)</string>
+    <string name="review_num">648 отзывов</string>
+    <string name="old_price"><strike>749 990 ₸</strike></string>
+    <string name="price">699 990 ₸</string>
+    <string name="credit">В кредит</string>
+    <string name="credit_price">58 333 ₸ <font color="#9B9B9B">в месяц</font></string>
+    <string name="month_3">3 мес</string>
+    <string name="month_6">6 мес</string>
+    <string name="month_9">9 мес</string>
+    <string name="month_12">12 мес</string>
+    <string name="month_24">24 мес</string>
+    <string name="specs">13.3` 2560x1600 | Intel Core i5 5287U | RAM 8 | SSD 512 | Mac OS X | Вес 1,58 кг</string>
+    <string name="instruction">Инструкция к товару</string>
+    <string name="available_configs">Доступные конфигурации</string>
+    <string name="display_inch">Дисплей, дюйм:</string>
+    <string name="inch_13">13’</string>
+    <string name="inch_15">15’</string>
+    <string name="mem_gb">Память, ГБ:</string>
+    <string name="gb_128">128</string>
+    <string name="gb_512">512</string>
+    <string name="color">Цвет</string>
+    <string name="campaign"><b>Внимание акция!</b> \n\nЕсли вы купите данный товар, то в дополение к товару получите в подарок аксессуары! Предложение действуюет до 22 сентября 2017 г.</string>
+    <string name="open_offer">Посмотреть предложение</string>
+    <string name="found_cheaper"><b>У конкурента дешевле?</b>\n\nОтправьте ссылку на данный товар, и получайте 110% компенсации разницы в цене или покупайте выбранный товар по цене конкурента.</string>
+    <string name="send">Отправить</string>
+    <string name="window">Витрина</string>
+    <string name="more">Подробнее</string>
+    <string name="accessories">Аксессуары</string>
+    <string name="buy">Купить</string>
+</resources>
